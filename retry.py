@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # encoding: utf-8
+"""
+retry function n times while run fail
+"""
 
 import requests
 
