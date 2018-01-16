@@ -9,7 +9,22 @@ import time
 
 TOTAL = 100
 
-for i in range(TOTAL):
-    time.sleep(0.1)
-    sys.stdout.write("{}/{}\r".format(i, TOTAL))
-    sys.stdout.flush()
+
+def precent_progress():
+    for i in range(TOTAL):
+        time.sleep(0.1)
+        sys.stdout.write("{}/{}\r".format(i, TOTAL))
+        sys.stdout.flush()
+
+
+def circle_progress():
+    item = ['-', '\\', '|', '/']
+    for i in range(TOTAL):
+        time.sleep(0.1)
+        sys.stdout.write(item[i % 4] + '\r')
+        sys.stdout.flush()
+
+
+if __name__ == "__main__":
+    circle_progress()
+
